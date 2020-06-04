@@ -1,0 +1,49 @@
+package Stepdefinition;
+
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import static org.junit.Assert.*;
+
+import javax.naming.Name;
+import java.util.List;
+
+public class USsteps {
+    @Given("^la suppression d'un plat necessite l'existance d'un plat$")
+    public void laSuppressionDUnPlatNecessiteLExistanceDUnPlat(List<Plat> liste, Plat plat) {
+        if(liste.contains(plat)){
+            lUtilisateurLaSupprime(liste,plat);
+        }
+    }
+
+    @When("^l'utilisateur la supprime$")
+    public void lUtilisateurLaSupprime(List<Plat> liste, Plat p) {
+        liste.remove(p);
+        lePlatEstRetireDuMenu(liste);
+    }
+
+    @Then("^le plat est retire du menu$")
+    public List<Plat> lePlatEstRetireDuMenu(List<Plat> liste) {
+        return liste;
+    }
+
+    @Given("^la modification d'un plat necessite l'existence d'un plat$")
+    public void laModificationDUnPlatNecessiteLExistenceDUnPlat(Plat plat, String name) {
+        Plat p = new Plat();
+        if(plat.getClass() == p.getClass()){
+            lUtilisateurLaModifie(plat, name);
+        }
+    }
+
+    @When("^l'utilisateur la modifie$")
+    public void lUtilisateurLaModifie(Plat p, String name) {
+        p.setNom(name);
+        lePlatEstModifie(p);
+    }
+
+    @Then("^le plat est modifie$")
+    public String lePlatEstModifie(Plat p) {
+        return ("le nom du plat est modifie en "+p.getNom());
+    }
+}
