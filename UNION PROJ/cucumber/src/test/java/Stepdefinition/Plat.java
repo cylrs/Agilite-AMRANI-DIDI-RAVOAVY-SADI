@@ -1,6 +1,5 @@
 package Stepdefinition;
 
-import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -15,8 +14,8 @@ public class Plat
     private String nom; 
     private int prix;
     private int composition;
-    private Recette recette;
-    private Menu MENU;
+    private Recette recetteP;
+    private Menu menu;
     /**
      * Constructeur d'objets de classe Plat
      */
@@ -24,10 +23,10 @@ public class Plat
     {
     }
     public Menu getMenu() {
-		return MENU;
+		return menu;
 	}
 	public void setMenu(Menu menu) {
-		this.MENU = menu;
+		this.menu = menu;
 	}
 	public String getNom(){
         return this.nom;
@@ -46,8 +45,8 @@ public class Plat
                 Objects.equals(prix, plat.prix)&&Objects.equals(composition, plat.composition);
     }
     
-    public void setRecette(Recette r){
-        this.recette=r;
+    public void setRecetteP(Recette r){
+        this.recetteP =r;
     }
     
     public String commanderPlat(String name, int price)

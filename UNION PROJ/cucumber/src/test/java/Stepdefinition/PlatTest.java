@@ -25,7 +25,7 @@ public class PlatTest {
         public void setUp() // throws java.lang.Exception
         {
             plat1 = new Plat();
-            plat1.setRecette(recette1);
+            plat1.setRecetteP(recette1);
         }
 
         /**

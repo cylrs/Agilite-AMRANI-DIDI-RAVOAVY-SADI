@@ -14,18 +14,18 @@ public class LegumeTest {
         assertEquals("Avril",l.getMere().getName());
     }
     @Test
-    public void TestgetName(){
+    public void testGetName(){
         assertEquals("Patate",l1.getName());
     }
     @Test
-    public void TestgetMere(){assertEquals("Avril",l1.getMere().getName());}
+    public void testGetMere(){assertEquals("Avril",l1.getMere().getName());}
     @Test
-    public void TestsetName(){
+    public void testSetName(){
         l1.setName("carotte");
         assertEquals("carotte",l1.getName());
     }
     @Test
-    public void TestisSoleil(){
+    public void testIsSoleil(){
         assertEquals(true,l1.isSoleil());
     }
 }

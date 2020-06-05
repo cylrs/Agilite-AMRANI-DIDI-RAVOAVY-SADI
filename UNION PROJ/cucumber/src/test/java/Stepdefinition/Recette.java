@@ -11,13 +11,13 @@ public abstract class Recette
     abstract public String creerRecette();
 
 
-    public int getNbIng() {
+    /*public int getNbIng() {
 		return nbIng;
 	}
 
 	public void setNbIng(int nbIng) {
 		this.nbIng = nbIng;
-	}
+	}*/
 
 	/**
      * Constructeur d'objets de classe Recette

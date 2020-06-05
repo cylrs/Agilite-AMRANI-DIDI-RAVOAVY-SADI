@@ -6,15 +6,16 @@ import javax.print.DocFlavor;
 
 public class Soleil {
     private static  Soleil instance;
-    private static String etoile;
+    private String etoile;
 
-    private  Soleil() { }
+    private  Soleil() {
+        etoile ="Soleil";
+    }
 
     public static Soleil getInstance()
     {
         if (instance == null){
             instance = new Soleil();
-            etoile="Soleil";
         }
         return instance;
     }
